@@ -1,0 +1,22 @@
+def isArmstrong(num):
+    original_num = num  #Store the original number
+    k = len(str(num))  #Calculate the number of digits in the number
+    sum = 0
+    
+    while num > 0:
+        last_digit = num % 10
+        sum = sum + last_digit ** k  #Add the k-th power of the last digit to sum
+        num = num // 10  #Update num by removing the last digit
+    return sum == original_num  #Compare sum with the original number
+
+
+def main():
+    number = 153
+    if isArmstrong(number):
+        print(number, "is an Armstrong number")
+    else:
+        print(number, "is not an Armstrong number")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,16 @@
+def nForest(n: int) -> None:
+    size = n // 2 + 1
+    for i in range(size):
+        row = ' '.join('*' for _ in range(i + 1))
+        print(row)
+
+# Test cases
+nForest(3)
+
+def nForest(n: int) -> None:
+    size = n // 2 + 1
+    for i in range(size):
+        print(' '.join('*' for _ in range(i + 1)))
+
+# Example Usage
+nForest(3)
